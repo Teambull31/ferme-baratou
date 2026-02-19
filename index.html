@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Ferme de Baratou – Poulets Fermiers Élevés en Plein Air</title>
+    <meta name="description"
+        content="La Ferme de Baratou vous propose des poulets fermiers élevés en plein air avec soin et passion. Vente directe sur les marchés locaux et lors d'événements. Saveur authentique, qualité garantie." />
+    <meta name="keywords"
+        content="poulets fermiers, élevage, vente directe, marché local, ferme, plein air, La Ferme de Baratou" />
+    <meta property="og:title" content="La Ferme de Baratou – Poulets Fermiers" />
+    <meta property="og:description"
+        content="Des poulets élevés avec amour, vendus en direct à la ferme et sur les marchés." />
+    <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐓</text></svg>" />
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════ -->
+    <nav id="navbar" role="navigation" aria-label="Navigation principale">
+        <div class="container nav-inner">
+            <a href="#hero" class="nav-logo" aria-label="Accueil – La Ferme de Baratou">
+                <img src="assets/logo.jpg" alt="La Ferme de Baratou" class="nav-logo-img" />
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#about">Notre Histoire</a></li>
+                <li><a href="#products">Nos Produits</a></li>
+                <li><a href="#markets">Marchés</a></li>
+                <li><a href="#testimonials">Avis</a></li>
+                <li><a href="#contact" class="btn btn-primary">Nous Contacter</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- mobile menu -->
+    <nav class="nav-mobile" id="navMobile" aria-label="Menu mobile">
+        <img src="assets/logo.jpg" alt="La Ferme de Baratou" class="nav-mobile-logo" />
+        <a href="#about" class="nav-mobile-link">Notre Histoire</a>
+        <a href="#products" class="nav-mobile-link">Nos Produits</a>
+        <a href="#markets" class="nav-mobile-link">Marchés & Événements</a>
+        <a href="#testimonials" class="nav-mobile-link">Avis Clients</a>
+        <a href="#contact" class="nav-mobile-link">Nous Contacter</a>
+    </nav>
+
+    <!-- ═══════════════════════════════════════
+     HERO
+═══════════════════════════════════════ -->
+    <section id="hero" aria-label="Bienvenue">
+        <div class="hero-bg" aria-hidden="true"></div>
+
+        <!-- Floating farm illustration -->
+        <div class="hero-illustration" aria-hidden="true">
+            <svg viewBox="0 0 640 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Ground -->
+                <ellipse cx="320" cy="490" rx="300" ry="40" fill="rgba(74,124,89,0.3)" />
+                <!-- Grass blades -->
+                <g fill="#4A7C59" opacity="0.7">
+                    <ellipse cx="80" cy="480" rx="8" ry="22" transform="rotate(-15 80  480)" />
+                    <ellipse cx="100" cy="478" rx="6" ry="18" transform="rotate(10  100 478)" />
+                    <ellipse cx="550" cy="478" rx="8" ry="22" transform="rotate(15  550 478)" />
+                    <ellipse cx="530" cy="480" rx="6" ry="18" transform="rotate(-10 530 480)" />
+                    <ellipse cx="320" cy="476" rx="7" ry="20" transform="rotate(5   320 476)" />
+                </g>
+                <!-- Barn -->
+                <rect x="390" y="280" width="200" height="170" rx="4" fill="#8B4513" opacity="0.9" />
+                <polygon points="390,280 590,280 490,190" fill="#A0522D" opacity="0.95" />
+                <!-- Barn roof detail -->
+                <rect x="450" y="235" width="80" height="8" rx="4" fill="#5C2E0C" opacity="0.6" />
+                <!-- Barn door -->
+                <rect x="450" y="360" width="80" height="90" rx="4" fill="#5C2E0C" opacity="0.9" />
+                <line x1="490" y1="360" x2="490" y2="450" stroke="#3A1A05" stroke-width="2" />
+                <!-- Barn window -->
+                <rect x="400" y="310" width="40" height="35" rx="3" fill="#F5BC6A" opacity="0.7" />
+                <rect x="540" y="310" width="40" height="35" rx="3" fill="#F5BC6A" opacity="0.7" />
+
+                <!-- Tree -->
+                <rect x="120" y="340" width="18" height="110" rx="6" fill="#5C3D21" />
+                <ellipse cx="129" cy="320" rx="55" ry="60" fill="#3a6447" />
+                <ellipse cx="109" cy="340" rx="35" ry="40" fill="#4A7C59" />
+                <ellipse cx="149" cy="335" rx="38" ry="45" fill="#4A7C59" />
+
+                <!-- Sun / moon glow -->
+                <circle cx="550" cy="80" r="50" fill="rgba(245,188,106,0.2)" />
+                <circle cx="550" cy="80" r="35" fill="rgba(245,188,106,0.35)" />
+
+                <!-- Big Chicken 1 -->
+                <g transform="translate(240,360)">
+                    <!-- body -->
+                    <ellipse cx="0" cy="0" rx="55" ry="45" fill="#F5F0E0" />
+                    <!-- head -->
+                    <circle cx="45" cy="-40" r="28" fill="#F5F0E0" />
+                    <!-- comb -->
+                    <ellipse cx="45" cy="-68" rx="8" ry="12" fill="#DC2626" transform="rotate(-10 45 -68)" />
+                    <ellipse cx="55" cy="-65" rx="7" ry="10" fill="#DC2626" transform="rotate(10  55 -65)" />
+                    <ellipse cx="35" cy="-65" rx="6" ry="9" fill="#DC2626" transform="rotate(-20 35 -65)" />
+                    <!-- beak -->
+                    <polygon points="71,-38 82,-34 71,-28" fill="#F5BC6A" />
+                    <!-- eye -->
+                    <circle cx="60" cy="-42" r="5" fill="#1A0D05" />
+                    <circle cx="62" cy="-44" r="1.5" fill="white" />
+                    <!-- wattle -->
+                    <ellipse cx="68" cy="-26" rx="7" ry="10" fill="#DC2626" opacity="0.85" />
+                    <!-- wing -->
+                    <ellipse cx="-10" cy="5" rx="35" ry="22" fill="#E8E0C8" transform="rotate(-15 -10 5)" />
+                    <!-- tail feathers -->
+                    <ellipse cx="-52" cy="-18" rx="20" ry="8" fill="#D4862A" transform="rotate(-40 -52 -18)" />
+                    <ellipse cx="-55" cy="-5" rx="20" ry="8" fill="#D4862A" transform="rotate(-25 -55 -5)" />
+                    <ellipse cx="-55" cy="10" rx="18" ry="7" fill="#D4862A" transform="rotate(-10 -55 10)" />
+                    <!-- legs -->
+                    <rect x="-15" y="42" width="8" height="40" rx="4" fill="#F5BC6A" />
+                    <rect x="10" y="42" width="8" height="40" rx="4" fill="#F5BC6A" />
+                    <!-- feet -->
+                    <line x1="-11" y1="82" x2="-25" y2="95" stroke="#F5BC6A" stroke-width="4" stroke-linecap="round" />
+                    <line x1="-11" y1="82" x2="-5" y2="97" stroke="#F5BC6A" stroke-width="4" stroke-linecap="round" />
+                    <line x1="14" y1="82" x2="2" y2="97" stroke="#F5BC6A" stroke-width="4" stroke-linecap="round" />
+                    <line x1="14" y1="82" x2="28" y2="95" stroke="#F5BC6A" stroke-width="4" stroke-linecap="round" />
+                </g>
+
+                <!-- Small Chicken 2 -->
+                <g transform="translate(410,400) scale(0.65)">
+                    <ellipse cx="0" cy="0" rx="55" ry="45" fill="#F0E8C8" />
+                    <circle cx="45" cy="-40" r="28" fill="#F0E8C8" />
+                    <ellipse cx="45" cy="-68" rx="7" ry="11" fill="#DC2626" />
+                    <ellipse cx="55" cy="-65" rx="6" ry="9" fill="#DC2626" />
+                    <polygon points="71,-38 82,-34 71,-28" fill="#F5BC6A" />
+                    <circle cx="60" cy="-42" r="5" fill="#1A0D05" />
+                    <circle cx="62" cy="-44" r="1.5" fill="white" />
+                    <ellipse cx="-52" cy="-18" rx="18" ry="7" fill="#A8621A" transform="rotate(-40 -52 -18)" />
+                    <ellipse cx="-55" cy="-5" rx="18" ry="7" fill="#A8621A" transform="rotate(-25 -55 -5)" />
+                    <rect x="-15" y="42" width="8" height="36" rx="4" fill="#F5BC6A" />
+                    <rect x="10" y="42" width="8" height="36" rx="4" fill="#F5BC6A" />
+                </g>
+
+                <!-- Egg basket -->
+                <g transform="translate(140,415)">
+                    <ellipse cx="0" cy="18" rx="38" ry="16" fill="#8B4513" opacity="0.8" />
+                    <rect x="-38" y="-5" width="76" height="25" rx="8" fill="#A0522D" opacity="0.9" />
+                    <ellipse cx="0" cy="-5" rx="38" ry="10" fill="#8B4513" opacity="0.85" />
+                    <!-- eggs -->
+                    <ellipse cx="-12" cy="-12" rx="9" ry="12" fill="#FFF9F0" />
+                    <ellipse cx="0" cy="-15" rx="9" ry="12" fill="#F5E6CB" />
+                    <ellipse cx="12" cy="-12" rx="9" ry="12" fill="#FFF9F0" />
+                    <!-- handle -->
+                    <path d="M-30,-5 Q0,-50 30,-5" stroke="#8B4513" stroke-width="5" fill="none" stroke-linecap="round"
+                        opacity="0.9" />
+                </g>
+            </svg>
+        </div>
+
+        <!-- wheat/grass bottom -->
+        <div class="wheat-bottom" aria-hidden="true">
+            <svg viewBox="0 0 1440 120" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 120 Q180 60 360 90 Q540 120 720 75 Q900 40 1080 80 Q1260 110 1440 60 L1440 120 Z"
+                    fill="#FDF6EC" />
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge" role="text">
+                    <span aria-hidden="true">✨</span> Élevage local & artisanal
+                </div>
+
+                <h1>
+                    Des poulets élevés<br />
+                    avec <em>passion</em> & <em>soin</em>
+                </h1>
+
+                <p class="hero-desc">
+                    Bienvenue à <strong>La Ferme de Baratou</strong>. Des poulets fermiers élevés en plein air,
+                    nourris naturellement, avec une qualité et une saveur incomparables.
+                    Retrouvez-nous sur vos marchés locaux !
+                </p>
+
+                <div class="hero-cta">
+                    <a href="#markets" class="btn btn-primary">
+                        <span aria-hidden="true">📍</span> Trouver nos marchés
+                    </a>
+                    <a href="#about" class="btn btn-outline">
+                        Notre histoire →
+                    </a>
+                </div>
+
+                <div class="hero-stats" role="list" aria-label="Nos chiffres">
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Plein air</span>
+                    </div>
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Antibiotique</span>
+                    </div>
+                    <div class="stat-item" role="listitem">
+                        <span class="stat-number">+5 ans</span>
+                        <span class="stat-label">D'expérience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-hint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7" />
+            </svg>
+            Découvrir
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     VALUES STRIP
+═══════════════════════════════════════ -->
+    <section id="values" aria-label="Nos valeurs">
+        <div class="container">
+            <div class="values-strip" role="list">
+                <div class="value-pill" role="listitem">
+                    <span class="icon" aria-hidden="true">🌿</span> Élevage naturel
+                </div>
+                <div class="value-pill" role="listitem">
+                    <span class="icon" aria-hidden="true">🐔</span> Bien-être animal
+                </div>
+                <div class="value-pill" role="listitem">
+                    <span class="icon" aria-hidden="true">🏡</span> Circuit court
+                </div>
+                <div class="value-pill" role="listitem">
+                    <span class="icon" aria-hidden="true">🌾</span> Alimentation saine
+                </div>
+                <div class="value-pill" role="listitem">
+                    <span class="icon" aria-hidden="true">❤️</span> Produit avec amour
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     ABOUT
+═══════════════════════════════════════ -->
+    <section id="about" aria-labelledby="about-title">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Visual -->
+                <div class="about-visual reveal">
+                    <div class="about-card-main">
+                        <img src="assets/logo.jpg" alt="Logo La Ferme de Baratou" class="about-logo-img" />
+                        <div class="about-card-overlay">
+                            <strong>La Ferme de Baratou</strong>
+                            <p>🌿 Élevage fermier en plein air depuis 2019</p>
+                        </div>
+                    </div>
+                    <div class="about-badge" aria-hidden="true">
+                        <div class="about-badge-inner">
+                            <span>Fermier</span><br />
+                            <span>⭐</span><br />
+                            <span>Local</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div class="about-text">
+                    <span class="section-label reveal">Notre Histoire</span>
+                    <h2 class="section-title reveal reveal-delay-1" id="about-title">
+                        Une passion née<br />du respect de la nature
+                    </h2>
+                    <p class="section-subtitle reveal reveal-delay-2">
+                        À La Ferme de Baratou, chaque poulet est élevé avec attention et liberté.
+                        Nos volailles passent leurs journées à courir dans les prés, à gratter la terre
+                        et à se nourrir sainement. Nous croyons qu'un animal heureux donne une viande
+                        d'exception.
+                    </p>
+                    <p class="section-subtitle reveal reveal-delay-3" style="margin-top:1rem;">
+                        Depuis nos débuts, nous avons fait le choix d'une agriculture raisonnée :
+                        zéro antibiotique, alimentation végétale, accès permanent au plein air.
+                        Nos clients deviennent souvent des amis, et nous sommes fiers de les retrouver
+                        chaque semaine au marché.
+                    </p>
+
+                    <div class="about-pillars">
+                        <div class="pillar reveal reveal-delay-1">
+                            <div class="pillar-icon" aria-hidden="true">🌱</div>
+                            <h4>Alimentation naturelle</h4>
+                            <p>Céréales locales, herbes fraîches et graines. Zéro additif.</p>
+                        </div>
+                        <div class="pillar reveal reveal-delay-2">
+                            <div class="pillar-icon" aria-hidden="true">☀️</div>
+                            <h4>Plein air & espace</h4>
+                            <p>Nos poulets ont accès à de vastes pâtures toute l'année.</p>
+                        </div>
+                        <div class="pillar reveal reveal-delay-3">
+                            <div class="pillar-icon" aria-hidden="true">🤝</div>
+                            <h4>Vente directe</h4>
+                            <p>Sans intermédiaire, pour une juste rémunération et des prix honnêtes.</p>
+                        </div>
+                        <div class="pillar reveal reveal-delay-4">
+                            <div class="pillar-icon" aria-hidden="true">💚</div>
+                            <h4>Bien-être animal</h4>
+                            <p>Densité faible, soins quotidiens, élevage à taille humaine.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     PRODUCTS
+═══════════════════════════════════════ -->
+    <section id="products" aria-labelledby="products-title">
+        <div class="container">
+            <div class="products-header">
+                <span class="section-label reveal">Nos Produits</span>
+                <h2 class="section-title reveal reveal-delay-1" id="products-title">
+                    Des saveurs authentiques,<br />directement de la ferme
+                </h2>
+                <p class="section-subtitle reveal reveal-delay-2" style="margin:0 auto;">
+                    Tous nos produits sont issus de notre élevage. Rien que du naturel,
+                    rien que du bon.
+                </p>
+            </div>
+
+            <div class="products-grid">
+                <article class="product-card reveal">
+                    <span class="product-emoji" aria-hidden="true">🍗</span>
+                    <h3>Poulet Fermier Entier</h3>
+                    <p>
+                        Élévé en plein air pendant minimum 81 jours, notre poulet entier offre
+                        une chair ferme et savoureuse. Idéal rôti au four avec des herbes de saison.
+                    </p>
+                    <span class="product-tag fresh">Disponible au marché</span>
+                </article>
+
+                <article class="product-card reveal reveal-delay-1">
+                    <span class="product-emoji" aria-hidden="true">🥩</span>
+                    <h3>Découpes & Préparations</h3>
+                    <p>
+                        Cuisses, filets, hauts de cuisse… Nos découpes sont réalisées à la demande
+                        pour vous garantir fraîcheur et précision. Commandez à l'avance !
+                    </p>
+                    <span class="product-tag order">Sur commande</span>
+                </article>
+
+                <article class="product-card reveal reveal-delay-2">
+                    <span class="product-emoji" aria-hidden="true">🥚</span>
+                    <h3>Œufs Fermiers</h3>
+                    <p>
+                        Des œufs de poules élevées en plein air, au jaune bien orangé et au goût
+                        incomparable. Une source de protéines naturelle et locale.
+                    </p>
+                    <span class="product-tag fresh">Disponible au marché</span>
+                </article>
+
+                <article class="product-card reveal reveal-delay-3">
+                    <span class="product-emoji" aria-hidden="true">🎉</span>
+                    <h3>Commandes Événements</h3>
+                    <p>
+                        Barbecue, mariage, repas de groupe… Nous préparons des commandes sur mesure
+                        pour vos événements privés ou professionnels. Contactez-nous !
+                    </p>
+                    <span class="product-tag seasonal">Événement spécial</span>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     MARKETS & EVENTS
+═══════════════════════════════════════ -->
+    <section id="markets" aria-labelledby="markets-title">
+        <div class="container">
+            <div class="markets-grid">
+                <div>
+                    <span class="section-label reveal">Où nous trouver</span>
+                    <h2 class="section-title reveal reveal-delay-1" id="markets-title">
+                        Nos marchés<br />& événements
+                    </h2>
+                    <p class="section-subtitle reveal reveal-delay-2">
+                        Retrouvez-nous chaque semaine sur les marchés locaux.
+                        En avance, pensez à passer commande pour être sûr de ne pas nous rater !
+                    </p>
+
+                    <div class="market-list" role="list" aria-label="Calendrier des marchés">
+                        <div class="market-item reveal" role="listitem">
+                            <div class="market-date" aria-label="Chaque samedi">
+                                <span class="day">SAM</span>
+                                <span class="month">Chaque sem.</span>
+                            </div>
+                            <div class="market-info">
+                                <h4>Marché de la Place du Village</h4>
+                                <p>📍 Centre-ville – Stands couverts</p>
+                            </div>
+                            <span class="market-time">8h – 13h</span>
+                        </div>
+
+                        <div class="market-item reveal reveal-delay-1" role="listitem">
+                            <div class="market-date" aria-label="Chaque mercredi">
+                                <span class="day">MER</span>
+                                <span class="month">Chaque sem.</span>
+                            </div>
+                            <div class="market-info">
+                                <h4>Marché Fermier du Terroir</h4>
+                                <p>📍 Salle des fêtes – Place de la Mairie</p>
+                            </div>
+                            <span class="market-time">7h – 12h30</span>
+                        </div>
+
+                        <div class="market-item reveal reveal-delay-2" role="listitem">
+                            <div class="market-date" aria-label="1er dimanche du mois">
+                                <span class="day">DIM</span>
+                                <span class="month">1er du mois</span>
+                            </div>
+                            <div class="market-info">
+                                <h4>Grande Foire Paysanne</h4>
+                                <p>📍 Esplanade du Lac – Vente & dégustation</p>
+                            </div>
+                            <span class="market-time">9h – 14h</span>
+                        </div>
+
+                        <div class="market-item reveal reveal-delay-3" role="listitem">
+                            <div class="market-date" aria-label="Événement à venir">
+                                <span class="day">MAR</span>
+                                <span class="month">22 Avr.</span>
+                            </div>
+                            <div class="market-info">
+                                <h4>Fête de la Campagne 2026</h4>
+                                <p>📍 Domaine de la Croix – Stand spécial</p>
+                            </div>
+                            <span class="market-time">10h – 18h</span>
+                        </div>
+                    </div>
+
+                    <p style="margin-top:1.5rem; font-size:0.85rem; color:var(--brown-md);">
+                        ⚠️ Les horaires peuvent varier. Contactez-nous pour confirmer notre présence.
+                    </p>
+                </div>
+
+                <!-- Event box -->
+                <div>
+                    <div class="event-box reveal reveal-delay-1">
+                        <div class="event-icon-row" aria-hidden="true">🛒 🐔 🥦</div>
+                        <h3>Commandez à l'avance !</h3>
+                        <p>
+                            Évitez les ruptures de stock en passant votre commande en avance.
+                            Nous préparons votre panier avec soin et vous le réservons
+                            pour le prochain marché.
+                        </p>
+                        <a href="#contact" class="btn btn-primary"
+                            style="background: var(--amber); width: 100%; justify-content: center;">
+                            📩 Passer une commande
+                        </a>
+                        <div style="margin-top:1.8rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.2);">
+                            <p style="font-size:0.82rem; opacity:0.75; margin-bottom:0;">
+                                🕐 Délai de commande : <strong style="opacity:1;">48h minimum</strong><br />
+                                📦 Livraison possible sur demande
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════ -->
+    <section id="testimonials" aria-labelledby="testimonials-title">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-label reveal">Avis Clients</span>
+                <h2 class="section-title reveal reveal-delay-1" id="testimonials-title">
+                    Ils nous font confiance
+                </h2>
+            </div>
+
+            <div class="testimonials-grid">
+                <article class="testimonial-card reveal">
+                    <div class="stars" aria-label="5 étoiles">★★★★★</div>
+                    <blockquote>
+                        "Jamais goûté un poulet aussi savoureux ! La chair est ferme, le goût incomparable.
+                        Je ne reviendrai plus jamais aux poulets du supermarché."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar a1" aria-hidden="true">M</div>
+                        <div>
+                            <div class="author-name">Marie-Claude</div>
+                            <div class="author-location">Cliente fidèle depuis 2021</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal reveal-delay-1">
+                    <div class="stars" aria-label="5 étoiles">★★★★★</div>
+                    <blockquote>
+                        "J'ai commandé 20 poulets pour notre barbecue de famille. Tout le monde était
+                        époustouflé par la qualité. Le service est au top, très pro et à l'écoute."
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar a2" aria-hidden="true">P</div>
+                        <div>
+                            <div class="author-name">Patrick G.</div>
+                            <div class="author-location">Commande événementielle</div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="testimonial-card reveal reveal-delay-2">
+                    <div class="stars" aria-label="5 étoiles">★★★★★</div>
+                    <blockquote>
+                        "Les œufs sont incroyables, les jaunes sont d'un orange vif. On les achète chaque
+                        semaine. Merci pour votre passion et votre sérieux !"
+                    </blockquote>
+                    <div class="testimonial-author">
+                        <div class="author-avatar a3" aria-hidden="true">S</div>
+                        <div>
+                            <div class="author-name">Sophie & Luc</div>
+                            <div class="author-location">Acheteurs réguliers</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     CONTACT
+═══════════════════════════════════════ -->
+    <section id="contact" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Info -->
+                <div>
+                    <span class="section-label reveal">Contact</span>
+                    <h2 class="section-title reveal reveal-delay-1" id="contact-title">
+                        Parlons de votre<br />commande
+                    </h2>
+                    <p class="section-subtitle reveal reveal-delay-2">
+                        Une question, une commande, une demande particulière ?
+                        N'hésitez pas à nous écrire ou nous appeler, nous répondons sous 24h.
+                    </p>
+
+                    <div class="contact-info reveal reveal-delay-3">
+                        <div class="contact-row">
+                            <div class="contact-row-icon" aria-hidden="true">📞</div>
+                            <div class="contact-row-text">
+                                <strong>Téléphone</strong>
+                                <span>06 XX XX XX XX</span>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-row-icon" aria-hidden="true">📧</div>
+                            <div class="contact-row-text">
+                                <strong>Email</strong>
+                                <span>contact@ferme-baratou.fr</span>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-row-icon" aria-hidden="true">📍</div>
+                            <div class="contact-row-text">
+                                <strong>Localisation</strong>
+                                <span>La Ferme de Baratou – Votre région</span>
+                            </div>
+                        </div>
+                        <div class="contact-row">
+                            <div class="contact-row-icon" aria-hidden="true">🕐</div>
+                            <div class="contact-row-text">
+                                <strong>Horaires de réponse</strong>
+                                <span>Lun–Sam · 8h–19h</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="contact-form reveal reveal-delay-2">
+                    <form id="contactForm" action="#" method="post" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Prénom</label>
+                                <input type="text" id="firstName" name="firstName" placeholder="Jean" required
+                                    autocomplete="given-name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Nom</label>
+                                <input type="text" id="lastName" name="lastName" placeholder="Dupont" required
+                                    autocomplete="family-name" />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="jean.dupont@exemple.fr" required
+                                autocomplete="email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Objet de la demande</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Sélectionnez…</option>
+                                <option value="commande-marche">Commande marché</option>
+                                <option value="commande-evenement">Commande événement / groupe</option>
+                                <option value="renseignement">Renseignement produits</option>
+                                <option value="livraison">Livraison possible ?</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Votre message</label>
+                            <textarea id="message" name="message"
+                                placeholder="Dites-nous ce qu'il vous faut, quantités, dates…" required></textarea>
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="btn btn-green"
+                            style="width:100%; justify-content:center;">
+                            <span id="submitText">Envoyer ma demande 🚀</span>
+                        </button>
+
+                        <p id="formSuccess"
+                            style="display:none; margin-top:1rem; color:#89D4A0; font-size:0.9rem; text-align:center;">
+                            ✅ Message envoyé ! Nous vous répondrons sous 24h.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════ -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-logo">
+                    <img src="assets/logo.jpg" alt="La Ferme de Baratou" class="footer-logo-img" />
+                </div>
+                <ul class="footer-links" aria-label="Liens utiles">
+                    <li><a href="#about">Notre Histoire</a></li>
+                    <li><a href="#products">Produits</a></li>
+                    <li><a href="#markets">Marchés</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <p class="footer-copy">
+                © 2026 La Ferme de Baratou · Tous droits réservés ·
+                <a href="mailto:contact@ferme-baratou.fr" style="color:rgba(253,246,236,0.4); transition:0.2s;"
+                    onmouseover="this.style.color='#D4862A'" onmouseout="this.style.color='rgba(253,246,236,0.4)'">
+                    contact@ferme-baratou.fr
+                </a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
