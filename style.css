@@ -437,24 +437,53 @@ a {
     }
 }
 
-/* floating chickens SVG */
-.hero-illustration {
+/* ── Hero photo card ───────────────────── */
+.hero-photo-card {
     position: absolute;
-    right: -2%;
-    bottom: 0;
-    width: min(55%, 640px);
-    z-index: 1;
-    animation: floatUp 6s ease-in-out infinite alternate;
-    opacity: 0.95;
+    right: 4%;
+    top: 50%;
+    transform: translateY(-50%) rotate(2deg);
+    width: min(42%, 520px);
+    z-index: 3;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 0 4px rgba(245, 188, 106, 0.25);
+    animation: floatCard 6s ease-in-out infinite alternate;
 }
 
-@keyframes floatUp {
+.hero-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 4/3;
+}
+
+.hero-photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem 1.4rem;
+    background: linear-gradient(to top, rgba(44, 26, 14, 0.85) 0%, transparent 100%);
+    color: var(--cream);
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+@keyframes floatCard {
     from {
-        transform: translateY(0px);
+        transform: translateY(-50%) rotate(2deg);
     }
 
     to {
-        transform: translateY(-18px);
+        transform: translateY(calc(-50% - 14px)) rotate(1deg);
     }
 }
 
@@ -1340,9 +1369,10 @@ footer {
         top: 1rem;
     }
 
-    .hero-illustration {
-        width: 55%;
-        opacity: 0.4;
+    .hero-photo-card {
+        width: 44%;
+        opacity: 0.7;
+        right: 2%;
     }
 
     .event-box {
@@ -1375,7 +1405,7 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .hero-illustration {
+    .hero-photo-card {
         display: none;
     }
 
